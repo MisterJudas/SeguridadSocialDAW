@@ -5,8 +5,10 @@
 //personaMapDni.values(); Coger todos los values
 //personaMapDni.remove(dni); Borrar atributo
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class SeguridadSocialHashMap {
     private Map<String, Persona> personaMapDni = new HashMap<>();
@@ -26,6 +28,22 @@ public class SeguridadSocialHashMap {
 
     public Persona obtenerPersonaPorSs(String numSS){
         return personaMapSs.get(numSS);
+    }
+
+    public void bajaPersona(String dni){
+        personaMapDni.remove(dni);
+    }
+
+    public Collection<Persona> obtenerTodas(){
+        return personaMapDni.values();
+    }
+
+    public Collection<Persona> obtenerPersonasMayoresQue(int edad){
+        return personaMapDni.values().stream().filter(persona -> persona.getEdad()>edad).collect(Collectors.toList());
+    }
+
+    public Collection<Persona> obtenerPersonasRangoSalarial(double min, double max){
+        return personaMapDni.values().stream().filter(persona -> persona.getSalario()>=min && persona.getSalario()<=max).collect(Collectors.toList());
     }
 
 

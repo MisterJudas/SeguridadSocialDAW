@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 public class Main {
     public static void main(String[] args) {
         SeguridadSocialHashMap seguridadSocial = new SeguridadSocialHashMap();
@@ -17,16 +19,18 @@ public class Main {
         System.out.println("Baja a la seguridad social: " + anna);
         seguridadSocial.bajaPersona(anna.getDni());
 
+        System.out.println(seguridadSocial.obtenerPersonaPorSs(carlos.getNumeroSeguridadSocial()));
+
         System.out.println("Lista de afiliados a la S.S.: " + seguridadSocial.obtenerTodas());
 
         System.out.println("obtenerPersonaPorDNI: " + seguridadSocial.obtenerPersonaPorDNI(jose.getDni()));
 
-        System.out.println("obtenerPersonaPorNumSS: " + seguridadSocial.obtenerPersonaPorNumSS(maria.getNumeroSeguridadSocial()));
+        //System.out.println("obtenerPersonaPorNumSS: " + seguridadSocial.obtenerPersonaPorNumSS(maria.getNumeroSeguridadSocial()));
 
         System.out.println("obtenerPersonasRangoSalarial: " + seguridadSocial.obtenerPersonasRangoSalarial(23000.00, 45000.00));
 
         System.out.println("obtenerPersonasMayoresQue: " + seguridadSocial.obtenerPersonasMayoresQue(25));
-oij
+
 
     }
 }
