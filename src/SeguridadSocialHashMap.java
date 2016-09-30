@@ -35,6 +35,9 @@ public class SeguridadSocialHashMap {
     }
 
     public Collection<Persona> obtenerTodas(){
+        for(String dni:personaMapDni.keySet()){
+            System.out.println(dni);
+        }
         return personaMapDni.values();
     }
 
@@ -45,9 +48,5 @@ public class SeguridadSocialHashMap {
     public Collection<Persona> obtenerPersonasRangoSalarial(double min, double max){
         return personaMapDni.values().stream().filter(persona -> persona.getSalario()>=min && persona.getSalario()<=max).collect(Collectors.toList());
     }
-
-
-
-
 
 }

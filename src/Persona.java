@@ -69,7 +69,7 @@ private String dni;
 
     @Override
     public String toString() {
-        return "Persona{" +
+        return "PERSONA{" +
                 "dni='" + dni + '\'' +
                 ", numeroSeguridadSocial='" + numeroSeguridadSocial + '\'' +
                 ", nombre='" + nombre + '\'' +
