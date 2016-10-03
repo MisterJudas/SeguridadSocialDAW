@@ -1,4 +1,4 @@
-/**
+package SeguridadSocial; /**
  * Created by usu26 on 23/09/2016.
  */
 //personaMapDni.keySet(); Coger todas las keys
@@ -26,7 +26,7 @@ public class SeguridadSocialHashMap {
         return personaMapDni.get(dni);
     }
 
-    public Persona obtenerPersonaPorSs(String numSS){
+    public Persona obtenerPersonaPorNumSS(String numSS){
         return personaMapSs.get(numSS);
     }
 
@@ -48,5 +48,6 @@ public class SeguridadSocialHashMap {
     public Collection<Persona> obtenerPersonasRangoSalarial(double min, double max){
         return personaMapDni.values().stream().filter(persona -> persona.getSalario()>=min && persona.getSalario()<=max).collect(Collectors.toList());
     }
+
 
 }

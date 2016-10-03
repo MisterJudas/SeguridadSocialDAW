@@ -1,11 +1,9 @@
+package SeguridadSocial;
+
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import java.util.TreeMap;
-import java.util.Set;
-import java.util.Iterator;
 
 /**
  * Created by 48092788H on 30/09/2016.

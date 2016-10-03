@@ -1,11 +1,11 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
+package SeguridadSocial;
 
 public class Main {
     public static void main(String[] args) {
 
-        //SeguridadSocialHashMap seguridadSocial = new SeguridadSocialHashMap();
-        //SeguridadSocialTreeMap seguridadSocial = new SeguridadSocialTreeMap();
-        SeguridadSocialHashSet seguridadSocial = new SeguridadSocialHashSet();
+        SeguridadSocialHashMap seguridadSocial = new SeguridadSocialHashMap();
+        //SeguridadSocial.SeguridadSocialTreeMap seguridadSocial = new SeguridadSocial.SeguridadSocialTreeMap();
+        //TallerCoches.RegistroVehiculos seguridadSocial = new TallerCoches.RegistroVehiculos();
 
         Persona jose = new Persona("39425364H", "111111111", "Jose", "Tomás", 35, 45000.00);
         Persona maria =  new Persona("39425654W", "33333333", "Maria", "Gallego", 55, 61300.20);
@@ -19,8 +19,7 @@ public class Main {
 
         System.out.println("Altas a la seguridad social:          "+ seguridadSocial.obtenerTodas());
 
-        System.out.println("Baja a la seguridad social:           "+ anna);
-        seguridadSocial.bajaPersona(anna.getDni());
+        System.out.println("Baja a la seguridad social:           "+ anna); seguridadSocial.bajaPersona(anna.getDni());
 
         System.out.println("obtenerPersonaPorNumSS:               "+ seguridadSocial.obtenerPersonaPorNumSS(carlos.getNumeroSeguridadSocial()));
 

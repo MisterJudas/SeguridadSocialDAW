@@ -1,20 +1,28 @@
+package SeguridadSocial;
+
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by 48092788H on 30/09/2016.
- */
-public class SeguridadSocialHashSet {
-
+public class SeguridadSocial {
     private List<Persona> personasList;
-    public SeguridadSocialHashSet() {
+    public SeguridadSocial() {
         personasList = new ArrayList<>();
     }
 
 
     // Debes comprobar que no se introduzcan dos personas con el mismo DNI/Número Seguridad Social
     public void altaPersona(Persona persona) {
+        boolean repetida = false;
+        for(Persona personaActual : personasList){
+            if(personaActual.getDni().equals(persona.getDni()) ||
+                    personaActual.getNumeroSeguridadSocial().equals(persona.getNumeroSeguridadSocial())){
+                repetida=true;
+                break;
+            }
+        }
+        if(!repetida){
             personasList.add(persona);
+        }
     }
 
 
@@ -67,7 +75,7 @@ public class SeguridadSocialHashSet {
         List<Persona> aux = new ArrayList<>();
         for (Persona personaActual: personasList){
             if(personaActual.getEdad()>=edad){
-                aux.add(personaActual);
+            aux.add(personaActual);
             }
         }
         return aux;
@@ -84,7 +92,7 @@ public class SeguridadSocialHashSet {
 
     @Override
     public String toString() {
-        return "SeguridadSocial{" +
+        return "SeguridadSocial.SeguridadSocial{" +
                 "personasList=" + personasList +
                 '}';
     }
