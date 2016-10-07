@@ -18,7 +18,6 @@ public class RegistroVehiculos {
     }
 
     public void eliminarVehiculo(String matricula) {
-
         coches.removeIf(coche -> coche.getMatricula().equals(matricula));
     }
 
@@ -26,14 +25,14 @@ public class RegistroVehiculos {
         return coches.stream().max(Comparator.comparing(Coche::getPrecio));
     }
 
-
     public List<Coche> obtenerVehiculosMarca(String marca) {
-        return coches.stream().findFirst().filter(coche -> coche.getMarca().equals(marca));
+
+        return coches.stream().filter(coche -> coche.getMarca().equals(marca)).collect(Collectors.toList());
     }
 
-    public List<Coche> obtenerTodos() {
-        System.out.println("Todos los datos: " + coches.keySet());
+    public Set<Coche> obtenerTodos() {
+        return coches;
     }
+
 }
-
 

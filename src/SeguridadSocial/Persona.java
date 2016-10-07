@@ -77,7 +77,7 @@ public class Persona {
                 ", apellido='" + apellido + '\'' +
                 ", edad=" + edad +
                 ", salario=" + salario +
-                '}';
+                '}'+System.lineSeparator();
     }
 
     @Override

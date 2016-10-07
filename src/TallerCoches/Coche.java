@@ -81,6 +81,6 @@ public Coche(String Matricula, String Marca, String Modelo, double Precio){
                 ", Marca='" + Marca + '\'' +
                 ", Modelo='" + Modelo + '\'' +
                 ", Precio=" + Precio +
-                '}';
+                '}'+System.lineSeparator();
     }
 }
